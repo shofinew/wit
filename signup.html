@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Signup</title>
+</head>
+<body>
+      <form action="" method="POST">
+            <div class="login-container">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                  <label for="name">Full Name (with title)</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                      <option value="bangladesh">Bangladesh</option>
+                      <option value="usa">USA</option>
+                      <option value="uk">UK</option>
+                      <option value="canada">Canada</option>                                  <option value="china">China</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9+]{10,15}" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" required>
+              </div>
+              <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input type="password" id="confirm-password" name="confirm_password" required>
+              </div>
+              <button type="submit" class="submit-btn">Sign Up</button>
+              
+              <button class="login" type="button" name="submit" id="submit" onclick="window.location.href='index.html'">Login</button>
+            </div>
+      </form>
+</body>
+</html>

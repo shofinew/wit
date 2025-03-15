@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Home</title>
+</head>
+<body>
+      <div id="first_section">
+            <header>
+                  <nav id="nav_section">
+                        <div>
+                              <label for="country"></label>
+                              <select id="country">
+                                  <option value="bangladesh">Bangladesh</option>
+                                  <option value="usa">USA</option>
+                                  <option value="uk">UK</option>
+                                  <option value="canada">Canada</option>                                  <option value="china">China</option>
+                              </select> 
+                        </div>
+                        <div id="date"></div>
+                        <div class="clock" id="liveClock">00:00:00</div>
+                  </nav>
+            </header>
+
+            <main>
+                  <section id="profile_identity">
+                        <div id="profile_img">img</div>
+                        <div>
+                              <div>Dr. Nabil Ahmed</div>
+                              <div>MBBS, DU</div>
+                        </div>
+
+                  </section>
+
+            </main>
+
+            <footer>
+                  <button class="btn" onclick="openPopup()" id="create_sedule" >+ create</button>
+
+
+                  <div class="overlay" id="overlay"></div>
+                  <div class="popup" id="popup">
+                      <h3>Confirm Timetable</h3>
+                      <textarea id="htmlContent" rows="5" cols="30">description...</textarea>
+                      <br>
+                      <br>
+                      <div>enter date</div>
+                      <label for="date" ></label>
+                      <input type="date">
+                      <br>
+                      <br>
+                      <br>
+                      <div>set time</div>
+                      <form>
+                        <label for="startTime">Start Time:</label>
+                        <input type="time" id="startTime" name="start_time">
+                          <br>
+                        <label for="endTime">End Time:</label>
+                        <input type="time" id="endTime" name="end_time">
+                          <br>
+                        <button type="button" onclick="calculateMinutes()">Calculate Minutes</button>
+                    </form>
+                
+                    <h3>Total Minutes: <span id="totalMinutes">0</span></h3>
+
+                      <br>
+                      <div>....OR...</div>
+                      <br>
+
+ <!-- <h2>Time Input Validation</h2> -->
+
+                                    <label for="hours">Hours:</label>
+                                    <input type="number" id="hours" min="0" max="23" step="1" placeholder="HH">
+                              
+                                    <label for="minutes">Minutes:</label>
+                                    <input type="number" id="minutes" min="0" max="59" step="1" placeholder="MM">
+                              
+                                    <br><br>
+                                    <button onclick="validateTime()">Submit</button>
+                              
+                                    <p id="errorMessage" class="error"></p>
+
+
+                      <button class="btn" onclick="closePopup()">Cancel</button>
+                      <button class="btn" onclick="submitHTML()">Confirm</button>
+                  </div>
+
+            </footer>
+            </div>
+      
+</body>
+<script src="script.js" defer></script>
+</html>
